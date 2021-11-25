@@ -11,7 +11,7 @@ def read_markdown_file(markdown_file):
     return Path(markdown_file).read_text()
 
 intro_markdown = read_markdown_file("introduction.md")
-report_text = st.markdown(intro_markdown, unsafe_allow_html=True)
+report_markdown = st.markdown(intro_markdown, unsafe_allow_html=True)
 
 #import streamlit as st
 #f#rom fpdf import FPDF

@@ -32,7 +32,7 @@ if export_as_pdf:
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
     pdf.cell(40, 10, report_text)
-    pdf.cell(50, 10, report_text2)
+    pdf.cell(40, 20, report_text2)
     
     html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
 

@@ -1,52 +1,22 @@
-import numpy as np
-import pandas as pd
 import streamlit as st
-from pandas_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
+from fpdf import FPDF
+import base64
 
-# Web App Title
-st.markdown('''
-# **The EDA App**
-This is the **EDA App** created in Streamlit using the **pandas-profiling** library.
-**Credit:** App built in `Python` + `Streamlit` by [Kisalay Srivastava]
----
-''')
+report_text = st.text_input("Report Text")
 
 
-# Upload CSV data
-with st.sidebar.header('1. Upload your CSV data'):
-    uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
-    st.sidebar.markdown("""
-""")
+export_as_pdf = st.button("Export Report")
 
-# Pandas Profiling Report
-if uploaded_file is not None:
-    @st.cache
-    def load_csv():
-        csv = pd.read_csv(uploaded_file)
-        return csv
-    df = load_csv()
-    pr = ProfileReport(df, explorative=True)
-    st.header('**Input DataFrame**')
-    st.write(df)
-    st.write('---')
-    st.header('**Pandas Profiling Report**')
-    st_profile_report(pr)
-else:
-    st.info('Awaiting for CSV file to be uploaded.')
-    if st.button('Press to use Example Dataset'):
-        # Example data
-        @st.cache
-        def load_data():
-            a = pd.DataFrame(
-                np.random.rand(100, 5),
-                columns=['a', 'b', 'c', 'd', 'e']
-            )
-            return a
-        df = load_data()
-        pr = ProfileReport(df, explorative=True)
-        st.header('**Input DataFrame**')
-        st.write(df)
-        st.write('---')
-        st.header('**Pandas Profiling Report**')
-        st_profile_report(pr)
+def create_download_link(val, filename):
+    b64 = base64.b64encode(val)  # val looks like b'...'
+    return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="{filename}.pdf">Download file</a>'
+
+if export_as_pdf:
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(40, 10, report_text)
+    
+    html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
+
+    st.markdown(html, unsafe_allow_html=True)

@@ -5,13 +5,13 @@ from pathlib import Path
 
 #report_text = st.text_input("Report Text")
 
-#st.code("WOW", language='python')
+report_text2 = st.code("WOW", language='python')
 
 def read_markdown_file(markdown_file):
     return Path(markdown_file).read_text()
 
 intro_markdown = read_markdown_file("introduction.md")
-report_text2 = st.markdown(intro_markdown, unsafe_allow_html=True)
+#report_text2 = st.markdown(intro_markdown, unsafe_allow_html=True)
 
 #import streamlit as st
 #f#rom fpdf import FPDF

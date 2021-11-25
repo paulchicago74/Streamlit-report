@@ -5,6 +5,8 @@ from pathlib import Path
 
 #report_text = st.text_input("Report Text")
 
+st.empty() = report_text2
+
 report_text2 = st.code("WOW", language='python')
 
 def read_markdown_file(markdown_file):

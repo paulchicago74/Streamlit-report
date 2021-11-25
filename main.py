@@ -5,7 +5,7 @@ from pathlib import Path
 
 #report_text = st.text_input("Report Text")
 
-report_text2 = st.code("WOW", language='python')
+report_code = st.code("WOW", language='python')
 
 def read_markdown_file(markdown_file):
     return Path(markdown_file).read_text()
@@ -32,7 +32,7 @@ if export_as_pdf:
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
     pdf.cell(40, 10, report_text)
-    pdf.cell(50, 10, report_text2)
+    pdf.cell(50, 10, report_code)
     
     html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
 

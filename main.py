@@ -16,7 +16,7 @@ report_markdown = st.markdown(intro_markdown, unsafe_allow_html=True)
 #import streamlit as st
 #f#rom fpdf import FPDF
 #im#port base64
-report_text2 = st.text_input ("Here")
+report_text = st.text_input ("Here")
 
 report_text = st.text_input("Report Text")
 
@@ -32,7 +32,7 @@ if export_as_pdf:
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
     pdf.cell(40, 10, report_text)
-    pdf.cell(40, 20, report_text2)
+   # pdf.cell(40, 20, report_text2)
     
     html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
 

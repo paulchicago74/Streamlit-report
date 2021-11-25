@@ -1,11 +1,11 @@
-import streamlit as st
-from fpdf import FPDF
-import base64
+#import streamlit as st
+#from fpdf import FPDF
+#import base64
 #from pathlib import Path
 
-report_text = st.text_input("Report Text")
+#report_text = st.text_input("Report Text")
 
-st.code("WOW", language='python')
+#st.code("WOW", language='python')
 
 #def read_markdown_file(markdown_file):
 #    return Path(markdown_file).read_text()
@@ -13,7 +13,12 @@ st.code("WOW", language='python')
 #intro_markdown = read_markdown_file("introduction.md")
 #st.markdown(intro_markdown, unsafe_allow_html=True)
 
-report_text = st.markdown('Streamlit is **_really_ cool**.')
+import streamlit as st
+from fpdf import FPDF
+import base64
+
+report_text = st.text_input("Report Text")
+
 
 export_as_pdf = st.button("Export Report")
 

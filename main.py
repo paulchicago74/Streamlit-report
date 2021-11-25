@@ -16,7 +16,7 @@ report_markdown = st.markdown(intro_markdown, unsafe_allow_html=True)
 #import streamlit as st
 #f#rom fpdf import FPDF
 #im#port base64
-report_text2 = st.markdown ("Here")
+report_text2 = st.text_input ("Here")
 
 report_text = st.text_input("Report Text")
 

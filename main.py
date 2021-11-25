@@ -4,6 +4,8 @@ import base64
 
 report_text = st.text_input("Report Text")
 
+st.code("WOW", language='python')
+
 report_text = st.markdown('Streamlit is **_really_ cool**.')
 
 export_as_pdf = st.button("Export Report")

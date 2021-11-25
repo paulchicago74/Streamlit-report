@@ -6,8 +6,9 @@ report_text = st.text_input("Report Text")
 
 st.code("WOW", language='python')
 
-with st.echo():
+with st.echo(code_location="below"):
 st.write('This code will be printed')
+
 report_text = st.markdown('Streamlit is **_really_ cool**.')
 
 export_as_pdf = st.button("Export Report")

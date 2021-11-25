@@ -11,7 +11,7 @@ def read_markdown_file(markdown_file):
     return Path(markdown_file).read_text()
 
 intro_markdown = read_markdown_file("introduction.md")
-report_markdown = st.markdown(intro_markdown, unsafe_allow_html=True)
+report_text2 = st.markdown(intro_markdown, unsafe_allow_html=True)
 
 #import streamlit as st
 #f#rom fpdf import FPDF
@@ -32,7 +32,7 @@ if export_as_pdf:
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
     pdf.cell(40, 10, report_text)
-    pdf.cell(50, 10, report_markdown)
+    pdf.cell(50, 10, report_text2)
     
     html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
 

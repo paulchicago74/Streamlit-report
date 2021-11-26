@@ -62,6 +62,6 @@ if submit:
 
 Pub1 = 100
 
-chart_data = Pub1
+chart_data = 100
 
 st.bar_chart(chart_data, 100, 100)

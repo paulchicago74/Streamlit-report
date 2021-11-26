@@ -24,10 +24,10 @@ template = env.get_template("template.html")
 
 left.write("Fill in the data:")
 Pub1 = 100
-
-form = left.form("template_form")
 chart_data = Pub1
 st.bar_chart(chart_data)
+
+form = left.form("template_form")
 metric = 100 / 10
 source = "Publication"
 student = form.text_input("Student name")

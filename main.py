@@ -20,14 +20,15 @@ intro_markdown = read_markdown_file("introduction.md")
 #im#port base64
 report_text = st.text_input ("Here")
 
-report_text2 = st.text_input("Report Text")
+#report_text2 = st.text_input("Report Text")
 
 with st.expander("See explanation"):
     st.write("""
 The chart above shows some numbers I picked for you.
 I rolled actual dice for these, so they're *guaranteed* to
 be random.""")
-with st.expander("See explanation"):st.image("https://static.streamlit.io/examples/dice.jpg")
+
+report_image = st.image("https://static.streamlit.io/examples/dice.jpg")
 
 
 export_as_pdf = st.button("Export Report")
@@ -41,7 +42,7 @@ if export_as_pdf:
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
     pdf.cell(40, 10, report_text)
-    pdf.cell(50, 10, report_text2)
+    pdf.cell(50, 10, report_image)
     
     html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
 

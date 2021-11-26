@@ -1,4 +1,4 @@
-import pdfkit
+cimport pdfkit
 from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
 from datetime import date
 import streamlit as st
@@ -25,7 +25,7 @@ template = env.get_template("template.html")
 left.write("Fill in the data:")
 
 
-st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+metric = st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
 
 form = left.form("template_form")
 student = form.text_input("Student name")

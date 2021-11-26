@@ -23,6 +23,10 @@ template = env.get_template("template.html")
 
 
 left.write("Fill in the data:")
+chart_data = pd.DataFrame(
+np.random.randn(50, 3),
+columns=["a", "b", "c"])
+st.bar_chart(chart_data)
 form = left.form("template_form")
 student = form.text_input("Student name")
 course = form.selectbox(

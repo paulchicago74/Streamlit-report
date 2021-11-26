@@ -33,6 +33,7 @@ course = form.selectbox(
     ["Report Generation in Streamlit", "Advanced Cryptography"],
     index=0,
 )
+if course == "Advanced Cryptography":form.write ('Teste')
 
 grade = form.slider("Grade", 1, 100, 60)
 submit = form.form_submit_button("Generate PDF")

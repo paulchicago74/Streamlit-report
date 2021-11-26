@@ -44,6 +44,7 @@ if submit:
         course=course,
         grade=f"{grade}/100",
         date=date.today().strftime("%B %d, %Y"),
+        metric = metric,
     )
 
     pdf = pdfkit.from_string(html, False)

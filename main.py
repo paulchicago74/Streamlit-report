@@ -60,7 +60,7 @@ if submit:
         mime="application/octet-stream",
     )
 
-chart_data = pd.DataFrame(
+chart_data = DataFrame(
      np.random.randn(50, 3),
      columns=["a", "b", "c"])
 

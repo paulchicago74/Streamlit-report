@@ -29,6 +29,11 @@ course = form.selectbox(
     ["Report Generation in Streamlit", "Advanced Cryptography"],
     index=0,
 )
+df = pd.DataFrame(
+np.random.randn(10, 5),
+columns=('col %d' % i for i in range(5)))
+
+st.table(df)
 grade = form.slider("Grade", 1, 100, 60)
 submit = form.form_submit_button("Generate PDF")
 

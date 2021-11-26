@@ -40,7 +40,7 @@ dataframe
 
 table=dataframe.to_html(classes='mystyle')
 
-source = table
+#source = table
 st.write('This is a line_chart.')
 #source = st.line_chart(dataframe)
 #source = "Publication"

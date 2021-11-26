@@ -77,4 +77,18 @@ if submit:
         mime="application/octet-stream",
     )
     
+    options = {
+'page-size': 'Letter',
+'margin-top': '0.9in',
+'margin-right': '0.9in',
+'margin-bottom': '0.9in',
+'margin-left': '0.9in',
+'encoding': "UTF-8",
+'header-center': 'YOUR HEADER',
+'custom-header' : [
+    ('Accept-Encoding', 'gzip')
+],
+'no-outline':None
+}
+    
 

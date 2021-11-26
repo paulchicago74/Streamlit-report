@@ -25,11 +25,7 @@ template = env.get_template("template.html")
 left.write("Fill in the data:")
 
 
-chart_data = form.DataFrame(
-np.random.randn(50, 3),
-columns=["a", "b", "c"])
-
-st.bar_chart(chart_data)
+st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
 
 form = left.form("template_form")
 student = form.text_input("Student name")

@@ -25,9 +25,8 @@ template = env.get_template("template.html")
 left.write("Fill in the data:")
 
 
-metric = st.write ('Teste')
-
 form = left.form("template_form")
+metric = form.write ('Teste')
 student = form.text_input("Student name")
 course = form.selectbox(
     "Choose course",

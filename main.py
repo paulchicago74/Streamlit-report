@@ -18,12 +18,12 @@ intro_markdown = read_markdown_file("introduction.md")
 #import streamlit as st
 #f#rom fpdf import FPDF
 #im#port base64
-report_text = st.text_input ("Here")
+#report_text = st.text_input ("Here")
 
-report_text = st.text_input("Report Text")
+#report_text = st.text_input("Report Text")
 
 with st.expander("See explanation"):
-    st.write("""
+    report_text = st.write("""
 The chart above shows some numbers I picked for you.
 I rolled actual dice for these, so they're *guaranteed* to
 be random.""")

@@ -75,9 +75,7 @@ if submit:
         data=pdf,
         file_name="diploma.pdf",
         mime="application/octet-stream",
-    )
-    
-    options = {
+        options = {
 'page-size': 'Letter',
 'margin-top': '0.9in',
 'margin-right': '0.9in',
@@ -90,5 +88,8 @@ if submit:
 ],
 'no-outline':None
 }
+    )
+    
+    
     
 

@@ -35,6 +35,7 @@ df = pd.DataFrame([['red', 0, 0], ['red', 1, 1], ['red', 2, 2], ['red', 3, 3], [
 # pivot the data into the correct shape
 df = df.pivot(index='x', columns='color', values='y')
 
+st.line_chart(df)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 df.plot(color=df.columns, figsize=(5, 3))
 

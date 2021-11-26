@@ -38,7 +38,9 @@ dataframe = pd.DataFrame(np.random.randn(10, 5),
     for i in range(5)))
 dataframe
 
-source = dataframe
+table=dataframe.to_html(classes='mystyle')
+
+source = table
 st.write('This is a line_chart.')
 #source = st.line_chart(dataframe)
 #source = "Publication"

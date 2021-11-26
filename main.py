@@ -61,5 +61,7 @@ if submit:
     )
 
 Pub1 = 100
+
 chart_data = Pub1
+
 st.bar_chart(chart_data)

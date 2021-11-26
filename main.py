@@ -27,7 +27,7 @@ with st.expander("See explanation"):
 The chart above shows some numbers I picked for you.
 I rolled actual dice for these, so they're *guaranteed* to
 be random.""")
-        st.image("https://static.streamlit.io/examples/dice.jpg")
+with st.expander("See explanation"):st.image("https://static.streamlit.io/examples/dice.jpg")
 
 
 export_as_pdf = st.button("Export Report")

@@ -28,6 +28,17 @@ left.write("Fill in the data:")
 
 form = left.form("template_form")
 metric = 100 / 10
+dataframe = pd.DataFrame(np.random.randn(10, 20),
+  columns = ('col %d' % i
+    for i in range(20)))
+dataframe
+
+dataframe = pd.DataFrame(np.random.randn(10, 5),
+  columns = ('col %d' % i
+    for i in range(5)))
+dataframe
+st.write('This is a line_chart.')
+source = st.line_chart(dataframe)
 #source = "Publication"
 student = form.text_input("Student name")
 course = form.selectbox(
@@ -62,14 +73,4 @@ if submit:
         mime="application/octet-stream",
     )
     
-dataframe = pd.DataFrame(np.random.randn(10, 20),
-  columns = ('col %d' % i
-    for i in range(20)))
-dataframe
 
-dataframe = pd.DataFrame(np.random.randn(10, 5),
-  columns = ('col %d' % i
-    for i in range(5)))
-dataframe
-st.write('This is a line_chart.')
-source = st.line_chart(dataframe)

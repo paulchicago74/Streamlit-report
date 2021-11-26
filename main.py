@@ -26,7 +26,7 @@ left.write("Fill in the data:")
 
 
 form = left.form("template_form")
-metric = form.write ('Teste')
+metric = 100 / 10
 student = form.text_input("Student name")
 course = form.selectbox(
     "Choose course",
@@ -42,7 +42,7 @@ if submit:
     html = template.render(
         student=student,
         #course=course,
-        #metric=metric,
+        metric=metric,
         grade=f"{grade}/100",
         date=date.today().strftime("%B %d, %Y"),
             )

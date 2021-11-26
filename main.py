@@ -24,7 +24,8 @@ template = env.get_template("template.html")
 
 left.write("Fill in the data:")
 
-chart_data = pd.DataFrame(
+
+chart_data = form.DataFrame(
 np.random.randn(50, 3),
 columns=["a", "b", "c"])
 

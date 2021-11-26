@@ -59,6 +59,11 @@ if submit:
         file_name="diploma.pdf",
         mime="application/octet-stream",
     )
+    
+dataframe = pd.DataFrame(np.random.randn(10, 20),
+  columns = ('col %d' % i
+    for i in range(20)))
+dataframe
 
 dataframe = pd.DataFrame(np.random.randn(10, 5),
   columns = ('col %d' % i

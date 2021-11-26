@@ -42,7 +42,7 @@ if submit:
     html = template.render(
         student=student,
         #course=course,
-        metric=metric,
+        #metric=metric,
         grade=f"{grade}/100",
         date=date.today().strftime("%B %d, %Y"),
             )

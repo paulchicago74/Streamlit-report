@@ -28,10 +28,7 @@ left.write("Fill in the data:")
 
 form = left.form("template_form")
 metric = 100 / 10
-dataframe = pd.DataFrame(np.random.randn(10, 20),
-  columns = ('col %d' % i
-    for i in range(20)))
-dataframe
+
 
 dataframe = pd.DataFrame(np.random.randn(10, 5),
   columns = ('col %d' % i

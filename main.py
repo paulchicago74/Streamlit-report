@@ -60,8 +60,8 @@ if submit:
         mime="application/octet-stream",
     )
 
-Pub1 = 100
+chart_data = pd.DataFrame(
+     np.random.randn(50, 3),
+     columns=["a", "b", "c"])
 
-chart_data = 100
-
-st.bar_chart(chart_data, 100, 100)
+st.bar_chart(chart_data)

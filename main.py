@@ -15,12 +15,12 @@ def read_markdown_file(markdown_file):
 intro_markdown = read_markdown_file("introduction.md")
 #report_text2 = st.markdown(intro_markdown, unsafe_allow_html=True)
 
-#import streamlit as st
+#import streamlit as ste
 #f#rom fpdf import FPDF
 #im#port base64
 #report_text = st.text_input ("Here")
 
-report_text = st.title("Report Text")
+report_text = st.text('This is some text.')
 
 with st.expander("See explanation"):
     st.write("""

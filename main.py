@@ -35,20 +35,6 @@ df = pd.DataFrame([['red', 0, 0], ['red', 1, 1], ['red', 2, 2], ['red', 3, 3], [
 # pivot the data into the correct shape
 df = df.pivot(index='x', columns='color', values='y')
 
-# display(df)
-color  blue  red
-x               
-0         0    0
-1         1    1
-2         4    2
-3         9    3
-4        16    4
-5        25    5
-6        36    6
-7        49    7
-8        64    8
-9        81    9
-
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 df.plot(color=df.columns, figsize=(5, 3))
 

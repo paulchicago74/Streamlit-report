@@ -5,7 +5,7 @@ from pathlib import Path
 
 #report_text = st.text_input("Report Text")
 
-report_text2 = st.empty()
+#report_text2 = st.empty()
 
 report_text2 = st.code("WOW", language='python')
 
@@ -40,9 +40,9 @@ def create_download_link(val, filename):
 if export_as_pdf:
     pdf = FPDF()
     pdf.add_page()
-    pdf.set_font('Arial', 'B', 16)
+    pdf.set_font('Arial', 'I', 10)
     pdf.cell(40, 10, report_text)
-    pdf.cell(50, 10, report_image)
+    pdf.cell(40, 50, report_text2)
     
     html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
 

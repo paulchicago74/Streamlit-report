@@ -20,6 +20,11 @@ right.write("Here's the template we'll be using:")
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 template = env.get_template("template.html")
 
+df = pd.DataFrame(
+np.random.randn(10, 5),
+columns=('col %d' % i for i in range(5)))
+
+st.table(df)
 
 left.write("Fill in the data:")
 form = left.form("template_form")
@@ -29,11 +34,7 @@ course = form.selectbox(
     ["Report Generation in Streamlit", "Advanced Cryptography"],
     index=0,
 )
-df = pd.DataFrame(
-np.random.randn(10, 5),
-columns=('col %d' % i for i in range(5)))
 
-st.table(df)
 grade = form.slider("Grade", 1, 100, 60)
 submit = form.form_submit_button("Generate PDF")
 

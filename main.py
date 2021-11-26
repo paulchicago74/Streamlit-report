@@ -41,11 +41,11 @@ submit = form.form_submit_button("Generate PDF")
 if submit:
     html = template.render(
         student=student,
-        course=course,
+        #course=course,
+        metric = metric,
         grade=f"{grade}/100",
         date=date.today().strftime("%B %d, %Y"),
-        metric = metric,
-    )
+            )
 
     pdf = pdfkit.from_string(html, False)
     st.balloons()

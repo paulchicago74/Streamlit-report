@@ -4,4 +4,5 @@ numpy==1.19.2
 pandas-profiling==2.10.0
 streamlit-pandas-profiling==0.1.1
 fpdf
+pdfkit
 

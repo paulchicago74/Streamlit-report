@@ -28,7 +28,7 @@ left.write("Fill in the data:")
 
 form = left.form("template_form")
 metric = 100 / 10
-source = "Publication"
+#source = "Publication"
 student = form.text_input("Student name")
 course = form.selectbox(
     "Choose course",
@@ -72,4 +72,4 @@ dataframe = pd.DataFrame(np.random.randn(10, 5),
     for i in range(5)))
 dataframe
 st.write('This is a line_chart.')
-st.line_chart(dataframe)
+source = st.line_chart(dataframe)

@@ -27,7 +27,7 @@ left.write("Fill in the data:")
 
 form = left.form("template_form")
 metric = 100 / 10
-source = Publication
+source = "Publication"
 student = form.text_input("Student name")
 course = form.selectbox(
     "Choose course",

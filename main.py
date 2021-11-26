@@ -1,49 +1,54 @@
+import pdfkit
+from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
+from datetime import date
 import streamlit as st
-from fpdf import FPDF
-import base64
-from pathlib import Path
+from streamlit.components.v1 import iframe
 
-#report_text = st.text_input("Report Text")
+st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
+st.title("🎓 Diploma PDF Generator")
 
-#report_text2 = st.empty()
+st.write(
+    "This app shows you how you can use Streamlit to make a PDF generator app in just a few lines of code!"
+)
 
-#report_text2 = st.code("WOW", language='python')
+left, right = st.columns(2)
 
-def read_markdown_file(markdown_file):
-    return Path(markdown_file).read_text()
+right.write("Here's the template we'll be using:")
 
-intro_markdown = read_markdown_file("introduction.md")
-#report_text2 = st.markdown(intro_markdown, unsafe_allow_html=True)
+#right.image("template.png", width=300)
 
-#import streamlit as ste
-#f#rom fpdf import FPDF
-#im#port base64
-#report_text = st.text_input ("Here")
-
-report_text = st.text('This is some text.')
-
-with st.expander("See explanation"):
-    st.write("""
-The chart above shows some numbers I picked for you.
-I rolled actual dice for these, so they're *guaranteed* to
-be random.""")
-
-report_image = st.image("https://static.streamlit.io/examples/dice.jpg")
+#env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
+#template = env.get_template("template.html")
 
 
-export_as_pdf = st.button("Export Report")
+left.write("Fill in the data:")
+form = left.form("template_form")
+student = form.text_input("Student name")
+course = form.selectbox(
+    "Choose course",
+    ["Report Generation in Streamlit", "Advanced Cryptography"],
+    index=0,
+)
+grade = form.slider("Grade", 1, 100, 60)
+submit = form.form_submit_button("Generate PDF")
 
-def create_download_link(val, filename):
-    b64 = base64.b64encode(val)  # val looks like b'...'
-    return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="{filename}.pdf">Download file</a>'
+if submit:
+    html = template.render(
+        student=student,
+        course=course,
+        grade=f"{grade}/100",
+        date=date.today().strftime("%B %d, %Y"),
+    )
 
-if export_as_pdf:
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font('Arial', 'I', 10)
-    pdf.cell(40, 10, report_text)
-    pdf.cell(40, 20, report_text2)
-    
-    html = create_download_link(pdf.output(dest="S").encode("latin-1"), "test")
+    pdf = pdfkit.from_string(html, False)
+    st.balloons()
 
-    st.markdown(html, unsafe_allow_html=True)
+    right.success("🎉 Your diploma was generated!")
+    # st.write(html, unsafe_allow_html=True)
+    # st.write("")
+    right.download_button(
+        "⬇️ Download PDF",
+        data=pdf,
+        file_name="diploma.pdf",
+        mime="application/octet-stream",
+    )

@@ -25,8 +25,7 @@ report_text = st.text_input("Report Text")
 with st.expander("See explanation"):st.write("""
 The chart above shows some numbers I picked for you.
 I rolled actual dice for these, so they're *guaranteed* to
-be random.""")
-st.image("https://static.streamlit.io/examples/dice.jpg")
+be random.""")st.image("https://static.streamlit.io/examples/dice.jpg")
 
 
 export_as_pdf = st.button("Export Report")

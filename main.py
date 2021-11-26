@@ -60,10 +60,9 @@ if submit:
         mime="application/octet-stream",
     )
 
-chart_data = pd.DataFrame({"source_number":[11199,11328,11287,32345,12342,1232,13456,123244,1235],
-    "location":["loc1","loc2","loc3","loc1","loc1","loc2","loc3","loc2","loc1"],
-    "category":["cat1","cat3","cat1","cat3","cat2","cat3","cat2","cat3","cat1"],
-    })
-    
-
-st.bar_chart(chart_data)
+dataframe = pd.DataFrame(np.random.randn(10, 5),
+  columns = ('col %d' % i
+    for i in range(5)))
+dataframe
+st.write('This is a line_chart.')
+st.line_chart(dataframe)

@@ -7,7 +7,7 @@ from pathlib import Path
 
 #report_text2 = st.empty()
 
-report_text2 = st.code("WOW", language='python')
+#report_text2 = st.code("WOW", language='python')
 
 def read_markdown_file(markdown_file):
     return Path(markdown_file).read_text()
@@ -20,7 +20,7 @@ intro_markdown = read_markdown_file("introduction.md")
 #im#port base64
 #report_text = st.text_input ("Here")
 
-report_text = st.text("Report Text")
+report_text = st.title("Report Text")
 
 with st.expander("See explanation"):
     st.write("""

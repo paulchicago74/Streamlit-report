@@ -5,4 +5,4 @@ pandas-profiling
 streamlit-pandas-profiling
 fpdf
 pdfkit
-streamlit-gchart
+streamlit_gchart==0.1.8

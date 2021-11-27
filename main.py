@@ -6,6 +6,9 @@ from streamlit.components.v1 import iframe
 import pandas as pd
 import numpy as np
 import streamlit_gchart as gchart
+import plotly.offline as offline
+import plotly.graph_objs as go
+
 
 st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
 st.title("🎓 Diploma PDF Generator")
@@ -77,4 +80,20 @@ if submit:
         
     )
     
+        
+
+data = [go.Bar(x=[2, 4, 6], y=[10, 12, 15])]
+layout = go.Layout(title='A Simple Plot', width=800, height=640)
+
+fig = offline.plot({'data': data,
+                    'layout': layout},
+                    auto_open=False,
+                    show_link=False,
+                    output_type='div', include_plotlyjs=True)
+
+opt = {'javascript-delay': 1000,
+       'no-stop-slow-scripts': None,
+       'debug-javascript': None}
+
+pdfkit.from_string(fig, 'test.pdf', options=opt)
   

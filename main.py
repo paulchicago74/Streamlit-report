@@ -33,7 +33,7 @@ metric = 100 / 10
 df = pd.DataFrame([0, 0], [1, 1], [2, 2], [3, 3], [4, 4], [5, 5])
 
 # pivot the data into the correct shape
-df = df.pivot(index='x', columns='color', values='y')
+#df = df.pivot(index='x', columns='color', values='y')
 
 chart = st.line_chart(df)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns

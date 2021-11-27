@@ -40,9 +40,6 @@ df
 chart = st.line_chart(df)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
-#source = table
-st.write('This is a line_chart.')
-source = st.line_chart(dataframe)
 #source = "Publication"
 student = form.text_input("Student name")
 course = form.selectbox(

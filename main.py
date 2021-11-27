@@ -58,6 +58,7 @@ if submit:
         #course=course,
         metric=metric,
         grade=f"{grade}/100",
+        df=df,
         date=date.today().strftime("%B %d, %Y"),
             )
 

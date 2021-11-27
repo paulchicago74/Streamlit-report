@@ -58,12 +58,11 @@ if submit:
         #course=course,
         metric=metric,
         grade=f"{grade}/100",
-        df=df,
+        chart=df,
         date=date.today().strftime("%B %d, %Y"),
             )
 
     pdf = pdfkit.from_string(html, False)
-    pdf = pdfkit.from_string(chart, diploma.pdf)
     st.balloons()
 
     right.success("🎉 Your diploma was generated!")

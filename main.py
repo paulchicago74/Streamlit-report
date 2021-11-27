@@ -98,5 +98,4 @@ if submit:
     ['cats eat mice']
 ]
     
-gchart.gchart(key="cat_chart", data=cat_data, chartType="WordTree", 
-    width=600, height=400, wordtree={"format": "implicit", "word": "cats"}
+gchart.gchart(key="cat_chart", data=cat_data, chartType="WordTree", width=600, height=400, wordtree={"format": "implicit", "word": "cats"}

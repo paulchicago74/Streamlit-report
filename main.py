@@ -35,6 +35,8 @@ df = pandas.DataFrame({
     'second column': [10, 20, 30, 40]
 })
 
+df
+
 chart = st.line_chart(df)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 df.plot(color=df.columns, figsize=(5, 3))

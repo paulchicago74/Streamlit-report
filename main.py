@@ -75,7 +75,9 @@ if submit:
         
     )
     
-   pop_data = [['City', '2010 Population', '2000 Population']]
+   pop_data = [
+       ['City', '2010 Population', '2000 Population']
+   ]
 
     gchart.gchart(key="city_chart", data=pop_data, chartType="BarChart", width='500px', height='300px', 
         title="Population of Largest U.S. Cities", hAxis={"title": 'Total Population', "minValue": 0}, vAxis={"title": 'City'} )

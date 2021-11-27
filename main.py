@@ -5,6 +5,7 @@ import streamlit as st
 from streamlit.components.v1 import iframe
 import pandas as pd
 import numpy as np
+import streamlit_gchart as gchart
 
 st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
 st.title("🎓 Diploma PDF Generator")
@@ -22,6 +23,30 @@ right.write("Here's the template we'll be using:")
 env = Environment(loader=FileSystemLoader("."), autoescape=select_autoescape())
 template = env.get_template("template.html")
 
+cat_data = [
+    ['Phrases'],
+    ['cats are better than dogs'],
+    ['cats eat kibble'],
+    ['cats are better than hamsters'],
+    ['cats are awesome'],
+    ['cats are people too'],
+    ['cats eat mice'],
+    ['cats meowing'],
+    ['cats in the cradle'],
+    ['cats eat mice'],
+    ['cats in the cradle lyrics'],
+    ['cats eat kibble'],
+    ['cats for adoption'],
+    ['cats are family'],
+    ['cats eat mice'],
+    ['cats are better than kittens'],
+    ['cats are evil'],
+    ['cats are weird'],
+    ['cats eat mice']
+]
+    
+gchart.gchart(key="cat_chart", data=cat_data, chartType="WordTree", 
+    width=600, height=400, wordtree={"format": "implicit", "word": "cats"}
 
 
 left.write("Fill in the data:")

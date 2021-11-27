@@ -63,7 +63,7 @@ if submit:
             )
 
     pdf = pdfkit.from_string(html, False)
-    pdf = pdfkit.from_string(chart, options=opt)
+    pdf = pdfkit.from_string(chart)
     st.balloons()
 
     right.success("🎉 Your diploma was generated!")

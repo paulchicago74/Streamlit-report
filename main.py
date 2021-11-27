@@ -75,7 +75,7 @@ if submit:
         
     )
     
-   pop_data = ['City', '2010 Population', '2000 Population']
+   pop_data = ['New York City, NY', 8175000, 8008000]
    
 
     gchart.gchart(key="city_chart", data=pop_data, chartType="BarChart", width='500px', height='300px', 

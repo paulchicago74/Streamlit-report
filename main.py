@@ -76,7 +76,6 @@ if submit:
     )
     
    pop_data = [
- 
        ['City', '2010 Population', '2000 Population'],
        ['New York City, NY', 8175000, 8008000],
        ['Los Angeles, CA', 3792000, 3694000],

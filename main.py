@@ -40,8 +40,6 @@ df
 chart = st.line_chart(df)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
-table=dataframe.to_html(classes='mystyle')
-
 #source = table
 st.write('This is a line_chart.')
 source = st.line_chart(dataframe)

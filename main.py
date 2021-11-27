@@ -30,7 +30,7 @@ form = left.form("template_form")
 metric = 100 / 10
 
 # sample data
-df = pd.DataFrame([['red', 0, 0], ['red', 1, 1], ['red', 2, 2], ['red', 3, 3], ['red', 4, 4], ['red', 5, 5], ['red', 6, 6], ['red', 7, 7], ['red', 8, 8], ['red', 9, 9], ['blue', 0, 0], ['blue', 1, 1], ['blue', 2, 4], ['blue', 3, 9], ['blue', 4, 16], ['blue', 5, 25], ['blue', 6, 36], ['blue', 7, 49], ['blue', 8, 64], ['blue', 9, 81]], columns=['color', 'x', 'y'])
+df = pd.DataFrame([[0, 0], [1, 1], [2, 2], [3, 3], [4, 4], [5, 5])
 
 # pivot the data into the correct shape
 df = df.pivot(index='x', columns='color', values='y')

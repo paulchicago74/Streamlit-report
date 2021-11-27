@@ -31,7 +31,7 @@ metric = 100 / 10
 
 # sample data
 df = pd.DataFrame({
-    'first column': [metric, 2, 3, 4],
+    'first column': [metric, metric * 2, 3, 4],
     'second column': [10, 20, 30, 40]
 })
 

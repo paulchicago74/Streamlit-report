@@ -39,13 +39,6 @@ df
 
 chart = st.line_chart(df)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
-df.plot(color=df.columns, figsize=(5, 3))
-
-
-dataframe = pd.DataFrame(np.random.randn(10, 5),
-  columns = ('col %d' % i
-    for i in range(5)))
-dataframe
 
 table=dataframe.to_html(classes='mystyle')
 

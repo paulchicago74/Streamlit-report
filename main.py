@@ -64,6 +64,8 @@ if submit:
         date=date.today().strftime("%B %d, %Y"),
             )
     chart = chart
+    
+    pdf = pdfkit.from_string(fig, 'test.pdf', options=opt)
 
     pdf = pdfkit.from_string(html, False)
     #pdf = pdfkit.from_string(chart, 'test.pdf')

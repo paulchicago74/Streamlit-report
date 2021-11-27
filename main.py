@@ -58,7 +58,7 @@ if submit:
         #course=course,
         metric=metric,
         grade=f"{grade}/100",
-        chart=df,
+        chart=chart,
         date=date.today().strftime("%B %d, %Y"),
             )
 

@@ -15,8 +15,8 @@ Zref = 10
 Time = 25
 Dvalue = 10
 
-Fvalue1 = ((10 ** ((Temp - Tref)/Zref))/1 * Time/10
-Fvalue2 = ((10 ** ((Temp - Tref)/Zref))/1 * Time/9
+Fvalue1 = (10 ** ((Temp - Tref)/Zref))/1 * Time/10
+Fvalue2 = (10 ** ((Temp - Tref)/Zref))/1 * Time/9
 
 #D= Fvalue / Dvalue
 

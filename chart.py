@@ -9,8 +9,15 @@ import streamlit_gchart as gchart
 import plotly.offline as offline
 import plotly.graph_objs as go
 
+Temp = 150
+Tref = 165
+Zref = 10
+Time = 25
+Dvalue = 10
 
+Fvalue = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
+D= BMI / Dvalue
 
 metric = 100 / 10
 

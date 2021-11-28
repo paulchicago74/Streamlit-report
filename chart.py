@@ -17,7 +17,7 @@ Dvalue = 10
 
 Fvalue1 = (10 ** ((Temp - Tref)/Zref))/1 * Time
 
-D= Fvalue / Dvalue
+#D= Fvalue / Dvalue
 
 metric = 100 / 10
 

@@ -70,6 +70,3 @@ alt.Chart(pd.DataFrame({
 }).mark_line()
                 
 #st.altair_chart(df2)
-                
-   
-

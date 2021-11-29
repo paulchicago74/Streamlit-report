@@ -73,7 +73,7 @@ series = pd.DataFrame({
   'count': [8, 6, 3, 1, 2, 4, 5, 5]
 })
 
-def slopee(Dvalue0,0,Dvalue10,Time):
+def slopee(Dvalue0, 0, Dvalue10, Time):
     x = (Time - 0) / (Dvalue10 - Dvalue0)
     return x
 

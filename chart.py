@@ -65,7 +65,7 @@ df2
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
 
-D-value = alt.Chart(df2).mark_line().encode(
+Dvalue = alt.Chart(df2).mark_line().encode(
 x='a', y='b', size='c', color='c')
     
-st.altair_chart(D-value)
+st.altair_chart(Dvalue)

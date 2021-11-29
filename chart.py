@@ -76,7 +76,7 @@ series = pd.DataFrame({
 basic_chart = alt.Chart(df2).mark_line().encode(
    
     y='D-value',
-    axis=alt.Axis(labelOverlap=True),
+    x=alt.Axis(labelOverlap=True),
    
     # legend=alt.Legend(title='Animals by year')
     

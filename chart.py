@@ -81,5 +81,12 @@ alt.Chart(source).mark_line(
     x='x',
     y='f(x)'
 )
+
+df = pd.DataFrame(
+np.random.randn(200, 3),
+columns=['a', 'b', 'c'])
+
+c = alt.Chart(df).mark_circle().encode(
+x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
     
-st.altair_chart(chart, use_container_width=True)
+st.altair_chart(c, use_container_width=True)

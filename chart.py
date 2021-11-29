@@ -58,7 +58,8 @@ df2 = pd.DataFrame({
 
 
 
-chart = st.line_chart(df, df2)
+chart = st.line_chart(df)
+chart = st.line_chart(df2)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
 

@@ -18,15 +18,23 @@ Dvalue = 10
 Fvalue0 = 0
 Fvalue1 = (Fvalue0 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/10) - 0))
 Fvalue2 = (Fvalue1 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/9) - (Time/10)))
+Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/9) - (Time/8)))
+Fvalue4 = (Fvalue3 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time) - (Time/9)))
 Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time) - (Time/9)))
+Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time) - (Time/9)))
+Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time) - (Time/9)))
+Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time) - (Time/9)))
+Fvalue3 = (Fvalue2 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time) - (Time/9)))
+
+
 #D= Fvalue / Dvalue
 
 metric = 100 / 10
 
 # sample data
 df = pd.DataFrame({
-    'first column': [Fvalue0, Fvalue1, Fvalue2, Fvalue3, 4],
-    'second column': [0, 10, 20, 30, 40]
+    'F-value': [Fvalue0, Fvalue1, Fvalue2, Fvalue3, Fvalue4],
+    #'D-value': [0, 10, 20, 30, 40]
 })
 
 df

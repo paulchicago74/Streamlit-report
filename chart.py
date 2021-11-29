@@ -16,7 +16,8 @@ Temp = 150
 Tref = 110
 Zref = 10
 Time = 25
-Dvalue = 10
+
+Dvalue = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
 
 Fvalue0 = 0
 Fvalue1 = (Fvalue0 + (10 ** ((Temp - Tref)/Zref) + (10 ** ((Temp - Tref)/Zref)))/2*((Time/10) - 0))

@@ -69,7 +69,7 @@ df3 = pd.DataFrame([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue
 columns=['a'])
 
 st.vega_lite_chart(df, {
-'mark': {'type': 'circle', 'tooltip': True},
+'mark': {'type': 'line', 'tooltip': True},
 'encoding': {
 'x': {'field': 'a', 'type': 'quantitative'},
 'y': {'field': 'b', 'type': 'quantitative'},

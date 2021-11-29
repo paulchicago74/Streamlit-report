@@ -78,7 +78,7 @@ series = pd.DataFrame({
 
 
 base = alt.Chart(df2).mark_line().encode(
-    alt.Y(df2), title='total population')
+    alt.Y(df2), title='total population'))
 .properties(
     width=200,
     height=200

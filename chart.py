@@ -74,8 +74,8 @@ series = pd.DataFrame({
   'count': [8, 6, 3, 1, 2, 4, 5, 5]
 })
 
-x = 'D-value'
-y = 'Time'
+x = ['D-value']
+y = ['Time']
 slope, intercept = np.polyfit(x,y,1)
 st.write(slope)
 

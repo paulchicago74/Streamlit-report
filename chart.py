@@ -64,12 +64,6 @@ chart = st.line_chart(df2)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
 
-x = np.arange(100)
-source = pd.DataFrame({
-  'x': x,
-  'f(x)': np.sin(x / 5)
-})
-
 alt.Chart(df2).mark_line().encode(
     x='x',
     y='f(x)'

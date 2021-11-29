@@ -69,6 +69,5 @@ df2 = alt.Chart(pd.DataFrame({
     'D-value': [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]
 }).mark_line()
                 
-#alt.Chart(df).mark_circle().encode(
-    
-#st.altair_chart(df2)
+   
+

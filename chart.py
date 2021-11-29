@@ -10,7 +10,7 @@ import plotly.offline as offline
 import plotly.graph_objs as go
 
 Temp = 150
-Tref = 165
+Tref = 150
 Zref = 10
 Time = 25
 Dvalue = 10

@@ -85,7 +85,18 @@ basic_chart = alt.Chart(df2).mark_line().encode(
     height=500
 )
 
-st.altair_chart(basic_chart)
+
+
+
+base = alt.Chart(df2).mark_line().encode(
+    alt.Y(df2), title='total population')
+).properties(
+    width=200,
+    height=200
+)
+
+
+st.altair_chart(base)
 
 
                 

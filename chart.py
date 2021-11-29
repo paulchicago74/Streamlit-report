@@ -73,5 +73,10 @@ series = pd.DataFrame({
   'count': [8, 6, 3, 1, 2, 4, 5, 5]
 })
 
+def slopee(x1,y1,x2,y2):
+    x = (y2 - y1) / (x2 - x1)
+    return x
+
+print(slopee(4,5,8,10))
 
                

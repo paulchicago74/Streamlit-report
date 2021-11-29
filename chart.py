@@ -56,9 +56,9 @@ df2 = pd.DataFrame({
     'D-value': [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]
 })
 
-df2
 
-chart = st.line_chart(df)
+
+chart = st.line_chart(df, df2)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
 

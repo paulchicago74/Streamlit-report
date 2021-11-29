@@ -73,7 +73,7 @@ series = pd.DataFrame({
 
 # Basic Altair line chart where it picks automatically the colors for the lines
 basic_chart = alt.Chart(df2).mark_line().encode(
-    x='year',
+   
     y='D-value',
    
     # legend=alt.Legend(title='Animals by year')

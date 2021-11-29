@@ -15,7 +15,8 @@ Zref = 10
 Time = 25
 Dvalue = 10
 
-Fvalue1 = (10 ** ((Temp - Tref)/Zref))/Time/10
+Fvalue0 = 0
+Fvalue1 = Fvalue0 + (10 ** ((Temp - Tref)/Zref)) + (10 ** ((Temp - Tref)/Zref))/2*(Time/10)
 Fvalue2 = Fvalue1 + 2 * (10 ** ((Temp - Tref)/Zref))/(Time/9)
 
 #D= Fvalue / Dvalue
@@ -24,7 +25,7 @@ metric = 100 / 10
 
 # sample data
 df = pd.DataFrame({
-    'first column': [Fvalue1, Fvalue2, 3, 4],
+    'first column': [Fvalue0, Fvalue1, Fvalue2, 3, 4],
     'second column': [10, 20, 30, 40]
 })
 

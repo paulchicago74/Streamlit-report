@@ -8,6 +8,7 @@ import numpy as np
 import streamlit_gchart as gchart
 import plotly.offline as offline
 import plotly.graph_objs as go
+import altair as alt
 
 Temp = 150
 Tref = 110
@@ -63,5 +64,14 @@ chart = st.line_chart(df2)
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
 
+x = np.arange(100)
+source = pd.DataFrame({
+  'x': x,
+  'f(x)': np.sin(x / 5)
+})
 
+alt.Chart(source).mark_line().encode(
+    x='x',
+    y='f(x)'
+)
   

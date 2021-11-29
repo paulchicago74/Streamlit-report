@@ -65,19 +65,19 @@ df2
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
 
->>> df = pd.DataFrame(
-...     np.random.randn(200, 3),
-...     columns=['a', 'b', 'c'])
->>>
->>> st.vega_lite_chart(df, {
-...     'mark': {'type': 'circle', 'tooltip': True},
-...     'encoding': {
-...         'x': {'field': 'a', 'type': 'quantitative'},
-...         'y': {'field': 'b', 'type': 'quantitative'},
-...         'size': {'field': 'c', 'type': 'quantitative'},
-...         'color': {'field': 'c', 'type': 'quantitative'},
-...     },
-... })
+df = pd.DataFrame(
+np.random.randn(200, 3),
+columns=['a', 'b', 'c'])
+
+st.vega_lite_chart(df, {
+'mark': {'type': 'circle', 'tooltip': True},
+'encoding': {
+'x': {'field': 'a', 'type': 'quantitative'},
+'y': {'field': 'b', 'type': 'quantitative'},
+'size': {'field': 'c', 'type': 'quantitative'},
+'color': {'field': 'c', 'type': 'quantitative'},
+},
+})
 
 
                 

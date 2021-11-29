@@ -26,7 +26,7 @@ metric = 100 / 10
 # sample data
 df = pd.DataFrame({
     'first column': [Fvalue0, Fvalue1, Fvalue2, 3, 4],
-    'second column': [10, 20, 30, 40]
+    'second column': [0, 10, 20, 30, 40]
 })
 
 df

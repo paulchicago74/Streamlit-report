@@ -11,6 +11,7 @@ import plotly.graph_objs as go
 import altair as alt
 import plotly.figure_factory as ff
 import plotly.express as px
+from sklearn.linear_model import LinearRegression
 
 Temp = 150
 Tref = 110
@@ -74,11 +75,10 @@ series = pd.DataFrame({
   'count': [8, 6, 3, 1, 2, 4, 5, 5]
 })
 
-x = ['D-value']
-y = ['Time']
-slope, intercept = np.polyfit(x,y)
-st.write(slope)
+x = np.array(['D-value']).reshape((-1, 1))
+y = np.array(['Time'])
 
+st.write(x)
 
 
                

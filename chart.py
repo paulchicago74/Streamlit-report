@@ -64,29 +64,7 @@ df2 = pd.DataFrame({
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
 
-chart = alt.Chart(df2).mark_line().encode(
-    df2='D-value'
-    
-)
-  
-x = np.arange(100)
-source = pd.DataFrame({
-  'x': x,
-  'f(x)': np.sin(x / 5)
-})
-
-alt.Chart(source).mark_line(
-    point=alt.OverlayMarkDef(color="red")
-).encode(
-    x='x',
-    y='f(x)'
-)
-
-df = pd.DataFrame(
-np.random.randn(200, 3),
-columns=['a', 'b', 'c'])
-
 c = alt.Chart(df2).mark_line().encode(
-x='a', y='b', size='c', color='c', tooltip=['Dvalue'])
+x='a', y='b', size='c', color='c')
     
 st.altair_chart(c, use_container_width=True)

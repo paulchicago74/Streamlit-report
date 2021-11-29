@@ -69,4 +69,3 @@ alt.Chart(pd.DataFrame({
    [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]
 }).mark_line()
                 
-#st.altair_chart(df2)

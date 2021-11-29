@@ -65,7 +65,7 @@ chart = st.line_chart(df2)
 
 
 alt.Chart(df2).mark_line().encode(
-    x='x',
-    y='f(x)'
+    x='D-value'
+    
 )
   

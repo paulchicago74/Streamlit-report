@@ -72,25 +72,14 @@ series = pd.DataFrame({
   'count': [8, 6, 3, 1, 2, 4, 5, 5]
 })
 
-# Basic Altair line chart where it picks automatically the colors for the lines
-basic_chart = alt.Chart(df2).mark_line().encode(
-   
-    y='D-value',
-    x=alt.Axis(labelOverlap=True),
-   
-    # legend=alt.Legend(title='Animals by year')
-    
-    ).properties(
-    width=900,
-    height=500
-)
+
 
 
 
 
 base = alt.Chart(df2).mark_line().encode(
     alt.Y(df2), title='total population')
-).properties(
+.properties(
     width=200,
     height=200
 )

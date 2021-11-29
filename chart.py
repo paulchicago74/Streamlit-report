@@ -77,7 +77,7 @@ series = pd.DataFrame({
 x = 'D-value'
 y = 'Time'
 slope, intercept = np.polyfit(x,y,1)
-print(slope)
+st.write(slope)
 
 
 

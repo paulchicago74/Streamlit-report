@@ -69,6 +69,7 @@ df2
 df2 = pd.DataFrame([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]
 )
 fig = px.line(df2, x="year", y="lifeExp", title='Life expectancy in Canada')
-fig.show()
+
+st.plotly_chart(fig, use_container_width=True)
 
                 

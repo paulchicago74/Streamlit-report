@@ -71,4 +71,4 @@ df2 = alt.Chart(pd.DataFrame({
                 
 #alt.Chart(df).mark_circle().encode(
     
-st.altair_chart(df2)
+#st.altair_chart(df2)

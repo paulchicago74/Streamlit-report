@@ -65,17 +65,5 @@ df2
 # plot the pivoted dataframe; if the column names aren't colors, remove color=df.columns
 
 
-df3 = pd.DataFrame([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10],
-columns=['a'])
-
-st.vega_lite_chart(df3, {
-'mark': {'type': 'line', 'tooltip': True},
- 'encoding': {
-
-'y': {'field': 'a', 'type': 'quantitative'},
-'size': {'field': 'c', 'type': 'quantitative'},
-'color': {'field': 'c', 'type': 'quantitative'},
-},
-})
 
                 

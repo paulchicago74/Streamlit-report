@@ -70,8 +70,7 @@ columns=['a'])
 
 st.vega_lite_chart(df3, {
 'mark': {'type': 'line', 'tooltip': True},
-    'encoding': {
-    'x': {'field': 'a', 'type': 'quantitative'},
+    
         },
 })
 

@@ -13,6 +13,8 @@ import plotly.figure_factory as ff
 import plotly.express as px
 from sklearn.linear_model import LinearRegression
 from statsmodels.formula.api import ols
+from sklearn.metrics import mean_squared_error, r2_score
+import statsmodels.api as sm
 
 Temp = 150
 Tref = 144

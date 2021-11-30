@@ -20,8 +20,8 @@ Temp = 150
 Tref = 144
 Zref = 10
 Time = 25
-Wanted_D = 10
 
+Wanted_D = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
 Dvalue = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
 
 Fvalue0 = 0

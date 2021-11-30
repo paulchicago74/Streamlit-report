@@ -88,7 +88,7 @@ st.write('coefficient of determination:', r_sq)
 
 st.write('intercept:', model.intercept_)
 
-st.write('slope:', model.coef_)
+#st.write('slope:', model.coef_)
 
 st.write(x)
 st.write(y)

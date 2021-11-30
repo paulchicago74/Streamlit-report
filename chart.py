@@ -20,6 +20,7 @@ Temp = 150
 Tref = 144
 Zref = 10
 Time = 25
+Wanted_D = 10
 
 Dvalue = st.sidebar.number_input('Enter the reference Dvalue', min_value=0.1, step=0.1)
 
@@ -88,6 +89,7 @@ b1 = Sxy/Sxx
 b0 = y_mean-b1*x_mean
 st.write('slope b1 is', b1)
 st.write('intercept b0 is', b0)
+st.write(b1*Wanted_D + b0)
 
 model = ols("DvalueX ~ TimeY", data=df2)
 results = model.fit()

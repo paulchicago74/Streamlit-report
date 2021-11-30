@@ -81,9 +81,9 @@ x, y = np.array(x), np.array(y)
 model = LinearRegression().fit(x, y)
 
 st.write('intercept:', model.intercept_)
-
-st.write(x)
-st.write(y)
+st.write('slope:', model.coef_)
+#st.write(x)
+#st.write(y)
 
 
                

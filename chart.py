@@ -15,6 +15,7 @@ from sklearn.linear_model import LinearRegression
 from statsmodels.formula.api import ols
 from sklearn.metrics import mean_squared_error, r2_score
 import statsmodels.api as sm
+from millify import millify
 
 Temp = 150
 Tref = 144
@@ -89,7 +90,7 @@ b1 = Sxy/Sxx
 b0 = y_mean-b1*x_mean
 #st.write('slope b1 is', b1)
 #st.write('intercept b0 is', b0)
-st.write('The time you need for a D-value of', Wanted_D ,'is' , b1*Wanted_D + b0)
+st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0))
 
 
 

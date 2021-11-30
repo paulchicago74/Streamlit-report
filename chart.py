@@ -90,7 +90,7 @@ b1 = Sxy/Sxx
 b0 = y_mean-b1*x_mean
 #st.write('slope b1 is', b1)
 #st.write('intercept b0 is', b0)
-st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0))
+st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wanted_D + b0, precision=2))
 
 
 

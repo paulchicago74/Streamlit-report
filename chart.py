@@ -79,8 +79,8 @@ y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time
 #model = LinearRegression()
 #model.fit(y, x)
 
-x_mean = mean(x_1)
-y_mean = mean(y_1)
+x_mean = np.mean(x_1)
+y_mean = np.mean(y_1)
 
 
 model = ols("DvalueX ~ TimeY", data=df2)

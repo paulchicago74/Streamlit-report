@@ -77,7 +77,7 @@ series = pd.DataFrame({
 
 #y = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]).reshape((-1, 1))
 #x = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1]).reshape((-1, 1))
-x_1 = ([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10])
+x_1 = ([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10].reshape(-1, 1))
 y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1])
 #x, y = np.array(x), np.array(y)
 #model = LinearRegression()
@@ -85,16 +85,13 @@ y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time
 model = LinearRegression()
 lr = LinearRegression.fit(x_1, y_1)
 st.write(lr)
-r_sq = model.score(x, y)
+
 st.write('coefficient of determination:', r_sq)
 
 st.write('intercept:', model.intercept_)
 
 st.write('slope:', model.coef_)
 
-new_model = LinearRegression().fit(x, y)
-st.write('intercept:', new_model.intercept_)
-st.write('slope:', new_model.coef_)
 
 
 

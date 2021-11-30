@@ -86,6 +86,8 @@ Sxy = np.sum(x_1*y_1)- n*x_mean*y_mean
 Sxx = np.sum(x_1*x_1) - n*x_mean*x_mean
 b1 = Sxy/Sxx
 b0 = y_mean-b1*x_mean
+st.write('slope b1 is', b1)
+st.write('intercept b0 is', b0)
 
 model = ols("DvalueX ~ TimeY", data=df2)
 results = model.fit()

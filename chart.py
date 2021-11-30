@@ -82,9 +82,10 @@ n = np.size(x_1)
 n_xy = x_1 * y_1
 x_mean = np.mean(x_1)
 y_mean = np.mean(y_1)
-Sxy = np.sum(x_1 * y_1) 
+Sxy = np.sum(x_1*y_1)- n*x_mean*y_mean
 Sxx = np.sum(x_1*x_1) - n*x_mean*x_mean
-
+b1 = Sxy/Sxx
+b0 = y_mean-b1*x_mean
 
 model = ols("DvalueX ~ TimeY", data=df2)
 results = model.fit()

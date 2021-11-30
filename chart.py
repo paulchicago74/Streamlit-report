@@ -88,8 +88,8 @@ st.write('intercept:', model.intercept_)
 
 st.write('slope:', model.coef_)
 
-#st.write(x)
-#st.write(y)
+st.write(x)
+st.write(y)
 
 
                

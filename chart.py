@@ -83,7 +83,7 @@ y = [0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2,
 model = LinearRegression()
 model.fit(x, y)
 model = LinearRegression().fit(x, y)
-st.write(Lineargreassion)
+st.write(LinearRegression)
 r_sq = model.score(x, y)
 st.write('coefficient of determination:', r_sq)
 

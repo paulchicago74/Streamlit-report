@@ -14,7 +14,7 @@ import plotly.express as px
 from sklearn.linear_model import LinearRegression
 
 Temp = 150
-Tref = 150
+Tref = 144
 Zref = 10
 Time = 25
 
@@ -88,7 +88,7 @@ st.write('coefficient of determination:', r_sq)
 
 st.write('intercept:', model.intercept_)
 
-#st.write('slope:', model.coef_)
+st.write('slope:', model.coef_)
 
 st.write(x)
 st.write(y)

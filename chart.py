@@ -80,6 +80,7 @@ y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time
 
 model = ols("DvalueX ~ TimeY", data=df2)
 results = model.fit()
+st.write(results.summary)
 st.write(results.rsquared)
 st.write(results.params)
 

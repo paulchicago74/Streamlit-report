@@ -79,7 +79,7 @@ y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time
 #model = LinearRegression()
 #model.fit(y, x)
 n = np.size(x_1)
-n_xy = x_1 * y1
+n_xy = x_1 * y_1
 x_mean = np.mean(x_1)
 y_mean = np.mean(y_1)
 Sxy = np.sum(x_1 * y_1) 

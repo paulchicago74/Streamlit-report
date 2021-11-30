@@ -14,7 +14,7 @@ import plotly.express as px
 from sklearn.linear_model import LinearRegression
 
 Temp = 150
-Tref = 110
+Tref = 150
 Zref = 10
 Time = 25
 

@@ -81,8 +81,8 @@ x = [Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dva
 y = [0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1]
 #x, y = np.array(x), np.array(y)
 model = LinearRegression()
-model.fit(x, y)
-model = LinearRegression().fit(x, y)
+model.fit(y, x)
+#model = LinearRegression().fit(x, y)
 st.write(LinearRegression)
 r_sq = model.score(x, y)
 st.write('coefficient of determination:', r_sq)

@@ -75,7 +75,7 @@ series = pd.DataFrame({
   'count': [8, 6, 3, 1, 2, 4, 5, 5]
 })
 
-x = np.array(['D-value']).reshape((-1, 1))
+x = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]).reshape((-1, 1))
 y = np.array(['Time'])
 
 st.write(x)

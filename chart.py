@@ -66,8 +66,6 @@ df2 = pd.DataFrame({
 
 df2
 
-st.write(df2.head)
-
 chart = st.line_chart(df)
 chart = st.line_chart(df2)
 
@@ -86,7 +84,7 @@ y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time
 #model.fit(y, x)
 
 
-model = ols("Dvalue ~ Time", data=df2)
+model = ols('Dvalue ~ Time', data=df2)
 results = model.fit()
 
 

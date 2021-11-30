@@ -90,6 +90,11 @@ st.write('intercept:', model.intercept_)
 
 st.write('slope:', model.coef_)
 
+new_model = LinearRegression().fit(x, y.reshape((-1, 1)))
+st.write('intercept:', new_model.intercept_)
+st.write('slope:', new_model.coef_)
+
+
 st.write(x)
 st.write(y)
 

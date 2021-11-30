@@ -80,6 +80,8 @@ y = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3
 x, y = np.array(x), np.array(y)
 model = LinearRegression().fit(x, y)
 
+st.write('intercept:', model.intercept_)
+
 st.write(x)
 st.write(y)
 

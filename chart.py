@@ -12,6 +12,7 @@ import altair as alt
 import plotly.figure_factory as ff
 import plotly.express as px
 from sklearn.linear_model import LinearRegression
+from statsmodels.formula.api import ols
 
 Temp = 150
 Tref = 144
@@ -77,26 +78,16 @@ series = pd.DataFrame({
 
 y = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]).reshape((-1, 1))
 #x = np.array([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1]).reshape((-1, 1))
-x_1 = np.array([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10]).reshape((-1, 1))
+x_1 = ([Dvalue0, Dvalue1, Dvalue2, Dvalue3, Dvalue4, Dvalue5, Dvalue6, Dvalue7, Dvalue8, Dvalue9, Dvalue10])
 y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time/2, Time/1])
 #x, y = np.array(x), np.array(y)
 #model = LinearRegression()
 #model.fit(y, x)
-model = LinearRegression()
-lr = LinearRegression.fit(x_1, y_1)
-st.write(lr)
 
-st.write('coefficient of determination:', r_sq)
 
-st.write('intercept:', model.intercept_)
-
-st.write('slope:', model.coef_)
+model = ols("MPG ~ Year", data=df2)
+results = model.fit()
 
 
 
-
-st.write(x)
-st.write(y)
-
-
-               
+           

@@ -81,6 +81,8 @@ y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time
 
 x_mean = np.mean(x_1)
 y_mean = np.mean(y_1)
+Sxy = np.sum(x_1*y_1)- n*x_mean*y_mean
+Sxx = np.sum(x_1*x_1)-n*x_mean*x_mean
 
 
 model = ols("DvalueX ~ TimeY", data=df2)

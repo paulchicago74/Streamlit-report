@@ -66,6 +66,7 @@ df2 = pd.DataFrame({
 
 df2
 
+st.write(df2.head)
 
 chart = st.line_chart(df)
 chart = st.line_chart(df2)

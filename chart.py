@@ -78,7 +78,7 @@ y_1 = ([0, Time/10, Time/9, Time/8, Time/7, Time/6, Time/5, Time/4, Time/3, Time
 #model.fit(y, x)
 
 
-model = ols(data=df2)
+model = ols(x_1, Y_1)
 results = model.fit()
 st.write(results.rsquared)
 st.write(results.params)

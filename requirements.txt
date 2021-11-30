@@ -10,3 +10,4 @@ plotly
 altair
 scikit-learn
 statsmodels
+millify

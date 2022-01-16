@@ -103,8 +103,8 @@ with st.sidebar:
     selected
            
         
-image = pyscreenshot.grab()
-image.show()
+#image = pyscreenshot.grab()
+#image.show()
   
 # To save the screenshot
-image.save("GeeksforGeeks.png")
+#image.save("GeeksforGeeks.png")

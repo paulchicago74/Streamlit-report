@@ -18,6 +18,7 @@ import statsmodels.api as sm
 from millify import millify
 from streamlit_option_menu import option_menu
 #import pyscreenshot
+import pyautogui
 
 
 Temp = 150
@@ -108,3 +109,6 @@ with st.sidebar:
   
 # To save the screenshot
 #image.save("GeeksforGeeks.png")
+
+screenshot = pyautogui.screenshot()
+screenshot.save("screen.png")

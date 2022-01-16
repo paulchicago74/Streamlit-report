@@ -102,3 +102,9 @@ with st.sidebar:
         icons=['house', 'gear'], menu_icon="cast", default_index=1)
     selected
            
+        
+image = pyscreenshot.grab()
+image.show()
+  
+# To save the screenshot
+image.save("GeeksforGeeks.png")

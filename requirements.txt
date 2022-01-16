@@ -11,3 +11,4 @@ altair
 scikit-learn
 statsmodels
 millify
+streamlit_option_menu

@@ -13,3 +13,4 @@ statsmodels
 millify
 streamlit-option-menu
 pyscreenshot
+pyautogui

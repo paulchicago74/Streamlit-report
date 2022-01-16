@@ -17,7 +17,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import statsmodels.api as sm
 from millify import millify
 from streamlit_option_menu import option_menu
-import pyscreenshot
+#import pyscreenshot
 
 
 Temp = 150

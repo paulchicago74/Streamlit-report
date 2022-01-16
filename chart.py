@@ -109,6 +109,13 @@ with st.sidebar:
   
 # To save the screenshot
 #image.save("GeeksforGeeks.png")
-
 screenshot = pyautogui.screenshot()
 screenshot.save("screen.png")
+with open("screen.png", "rb") as file:
+        btn = st.download_button(
+             label="Download image",
+             data=file,
+             file_name="screen.png",
+             mime="image/png"
+           )
+

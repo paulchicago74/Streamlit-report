@@ -16,6 +16,7 @@ from statsmodels.formula.api import ols
 from sklearn.metrics import mean_squared_error, r2_score
 import statsmodels.api as sm
 from millify import millify
+from streamlit_option_menu import option_menu
 
 Temp = 150
 Tref = 144
@@ -94,5 +95,8 @@ st.write('The time you need for a D-value of', Wanted_D ,'is' , millify(b1*Wante
 
 
 
-
+with st.sidebar:
+    selected = option_menu("Main Menu", ["Home", 'Settings'], 
+        icons=['house', 'gear'], menu_icon="cast", default_index=1)
+    selected
            

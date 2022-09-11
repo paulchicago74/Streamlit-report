@@ -18,7 +18,7 @@ import statsmodels.api as sm
 from millify import millify
 from streamlit_option_menu import option_menu
 #import pyscreenshot
-import pyautogui
+#import pyautogui
 
 
 Temp = 150
